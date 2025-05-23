@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cliente - Solicitar Manutenção</title>
+    <script src="/static/scripts.js"></script>
+</head>
+<body>
+    <h1>Solicitar Manutenção</h1>
+    <form id="solicitacao">
+        Cliente: <input type="text" id="cliente" required><br>
+        Descrição: <input type="text" id="descricao" required><br>
+        <button type="submit">Enviar Solicitação</button>
+    </form>
+    <div id="resposta"></div>
+    <hr>
+    <label for="middleware_select">Middleware:</label>
+    <select id="middleware_select">
+        <option value="redis">Redis</option>
+        <option value="rabbitmq">RabbitMQ</option>
+        <option value="kafka">Kafka</option>
+    </select>
+    <span id="middleware_status"></span>
+</body>
+</html>
