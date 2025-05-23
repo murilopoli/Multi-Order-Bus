@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Técnico - Gerenciar Ordens</title>
+    <script src="/static/scripts.js"></script>
+</head>
+<body>
+    <h1>Gerenciar Ordens de Serviço</h1>
+    <button onclick="listarOrdens()">Listar Ordens</button>
+    <ul id="ordens"></ul>
+    <form id="aprovacao">
+        Ordem ID: <input type="text" id="ordem_id" required><br>
+        Aprovar Orçamento? <select id="aprovado">
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select><br>
+        <button type="submit">Enviar Aprovação</button>
+    </form>
+    <div id="resposta"></div>
+    <hr>
+    <label for="middleware_select">Middleware:</label>
+    <select id="middleware_select">
+        <option value="redis">Redis</option>
+        <option value="rabbitmq">RabbitMQ</option>
+        <option value="kafka">Kafka</option>
+    </select>
+    <span id="middleware_status"></span>
+</body>
+</html>
